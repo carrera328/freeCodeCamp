@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        // clear timer function 
+        var initial;
+        function clearDisplay() {
+            clearInterval(timer);
+            document.getElementById('display').innerHTML = initial;
+
+        }
+        $(document).ready(function () {
+            // timer function
+            $('#start').click(function () {
+                var count = document.getElementById('inputTime').value;
+                initial = count;
+                console.log(initial);
+                count = parseInt(count); 
+                timer = setInterval(function () {
+                    if (count != null) {
+                        count--;
+                    }
+
+                    if (count == 0) {
+                        clearInterval(timer);
+                    }
+
+                    $('#display').html(count);
+                }, 1000);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <button type='submit' id='start'>Start</button>
+    <button type='submit' onclick='clearDisplay()'>Reset Timer</button>
+    <input id='inputTime' type='text'>
+    <div id="timer_div"></div>
+    <div id="display"></div>
+</body>
+
+</html>

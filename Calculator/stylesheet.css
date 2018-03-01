@@ -1,0 +1,32 @@
+body{
+    background : url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Andromeda_Galaxy_%28with_h-alpha%29.jpg/1200px-Andromeda_Galaxy_%28with_h-alpha%29.jpg');
+    font-family: monospace;
+    height:400px;
+}
+
+
+#calc-body {
+    
+    position:relative;
+    width: 228px;
+    border: 2px blue;
+    border-radius:2px;
+    margin: 50% auto;
+    margin-top: 10%;
+
+}
+input[type=text] {
+    display:block;
+    width:100%;
+    font-size: 18px;
+    margin-bottom:-10px;
+}
+.btn{
+    width:4.12em;
+
+}
+
+h1{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
