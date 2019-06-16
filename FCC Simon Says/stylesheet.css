@@ -65,12 +65,26 @@ table {
 
 td {
     position: relative;
-     background-color: yellow;
      width: 50%;
      height: 50px !important;
      border-style: solid;
- }
+}
 
+ /* individual boxes */
+
+#boxOne {
+    background-color: lightblue;
+}
+
+#boxTwo {
+    background-color: lightcoral;
+}
+
+#boxThree {
+    background-color: yellow;
+}
+
+<<<<<<< HEAD
  /* individual boxes */
 
 #boxOne {
@@ -85,6 +99,8 @@ td {
     background-color: yellow;
 }
 
+=======
+>>>>>>> Simon
 #boxFour {
     background-color: lightgreen;
 }
