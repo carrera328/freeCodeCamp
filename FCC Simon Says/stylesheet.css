@@ -81,11 +81,9 @@ td {
 }
 
 #boxThree {
-    background-color: yellow
- /* individual boxes */
-
+    background-color: yellow;
 }
- 
+
 #boxFour {
     background-color: lightgreen;
 }
