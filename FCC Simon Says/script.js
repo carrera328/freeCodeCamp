@@ -19,21 +19,33 @@ function gameStart() {
             sequence.push(returnRandomNum());
         }
         console.log(sequence);
+        // displaying the sequence based on the counter
         for (var i = 0; i <= gameCounter; i++) {
-            boxes[sequence[gameCounter]].style.opacity = 0.4;
+            var toBeChanged = boxes[sequence[gameCounter]];
+            toBeChanged.style.opacity = 0.4;
+            console.log(toBeChanged);
             setTimeout(function() {
-
-            console.log(boxes[sequence[gameCounter]]);
-            }, 100)
-            // setTimeout(function() {
-            //     el.style.opacity = 1;
-            // }, 100)
-
+            toBeChanged.style.opacity = 1;
+            }, 300)
         }
+        // listen for the correct sequence (6/16/2019)
         for (var i = 0; i < gameCounter + 1; i++) {
-            // listen for the correct sequence
+            document.getElementById("boxOne").addEventListener("click", function(e){
+                userInput.push(0);
+            });
+            document.getElementById("boxTwo").addEventListener("click", function(e){
+                userInput.push(1)
+            });
+            document.getElementById("boxThree").addEventListener("click", function(e){
+                userInput.push(2);
+            });
+            document.getElementById("boxFour").addEventListener("click", function(e){
+                userInput.push(3);
+            });
         }
-        // listen for correct sequence
+        console.log(userInput);
+        // clear the sequence and end the game if user input isn't correct
+        
         sequence = [];
         endGame = true;
     }
@@ -42,12 +54,6 @@ function gameStart() {
 var controller = {
     handleBoxOne: function() {
         var el = document.getElementById("boxOne");
-        console.log(el);
-        el.style.opacity = 0.4;
-        setTimeout(function() {
-            el.style.opacity = 1;
-        }, 100)
-
         gameStart();
     }
 }
